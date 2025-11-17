@@ -2,6 +2,10 @@
 
 This repository contains the KiCad PCB design files for the Brushograph (miniPenzlograf) project, a pen-plotting device designed for creating artistic drawings and patterns.
 
+**A manufacturing-ready PCB-design to run FluidNC on ESP32 including ULN2003 drivers for 3 uni-polar stepper motors (28byj-48)**
+
+![Brushograph PCB](photos/PCB_white.jpg)
+
 **A DIY etchable PCB-design to run FluidNC on ESP32 including ULN2003 drivers for 3 uni-polar stepper motors (28byj-48)**
 
 ![Brushograph PCB](photos/Brushograph_PCB_01.jpg)
@@ -20,6 +24,9 @@ This PCB repository is part of the larger Brushograph project, which explores "W
   - `.kicad_sch` - Schematic files
   - `.kicad_pro` - Project files
   - `MASK/` - Contains mask files in SVG and PDF format for PCB silkscreen
+- `Brushograf_PCB-china/` - Latest KiCad project prepared for fabrication
+  - `Gerber_Brusograf/` - Generated Gerber set for PCB manufacturing
+  - `Gerber_Brusograf_black.zip` - Zipped Gerbers ready to upload to your PCB manufacturer
 - `FluidNC_config/` - Configuration for FluidNC firmware
 - `photos/` - Project photos and documentation images
 
@@ -81,9 +88,15 @@ The PCB is designed specifically for the commonly available and inexpensive 28BY
 
 To view or modify the PCB design:
 1. Install KiCad (version 6.0 or later recommended)
-2. Open the `.kicad_pro` project file in the Brusograf_PCB directory
+2. Open the `.kicad_pro` project file in the `Brusograf_PCB` directory
+     - For the latest manufacturing-ready version, you can also open the project in `Brushograf_PCB-china/`
 
 For complete setup instructions, including firmware and mechanical assembly, please refer to the [Brushograph Wiki](https://wiki.sgmk-ssam.ch/wiki/Brushograph).
+
+## Manufacturing-ready files
+
+- Latest Gerbers (ZIP, ready for fab): [`Brushograf_PCB-china/Gerber_Brusograf_black.zip`](Brushograf_PCB-china/Gerber_Brusograf_black.zip)
+- Gerber folder (all layers and drill files): [`Brushograf_PCB-china/Gerber_Brusograf/`](Brushograf_PCB-china/Gerber_Brusograf/)
 
 ## Related Repositories
 
