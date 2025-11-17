@@ -9,9 +9,9 @@ stepping:
 axes:
   shared_stepper_disable_pin: NO_PIN
   x:
-    steps_per_mm: 85
-    max_rate_mm_per_min: 1000
-    acceleration_mm_per_sec2: 50
+    steps_per_mm: 93
+    max_rate_mm_per_min: 1500
+    acceleration_mm_per_sec2: 80
     max_travel_mm: 200
     motor0:
       unipolar:
@@ -23,9 +23,9 @@ axes:
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
   y:
-    steps_per_mm: 85
-    max_rate_mm_per_min: 1000
-    acceleration_mm_per_sec2: 50
+    steps_per_mm: 93
+    max_rate_mm_per_min: 1500
+    acceleration_mm_per_sec2: 80
     max_travel_mm: 200
     motor0:
       unipolar:
@@ -37,9 +37,9 @@ axes:
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
   z:
-    steps_per_mm: 78
-    max_rate_mm_per_min: 300
-    acceleration_mm_per_sec2: 30
+    steps_per_mm: 108
+    max_rate_mm_per_min: 1000
+    acceleration_mm_per_sec2: 40
     max_travel_mm: 100
     motor0:
       unipolar:
@@ -51,14 +51,15 @@ axes:
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
 macros:
-  startup_line0: 
-  macro0: G0X30Y30F12000
-  macro1: G0X-10Y-10F1200&G0 X-8 Y-8 F500&G10 P0 L20 X0&G10 P0 L20 Y0
-  after_reset: G53 Z10 & G53 X140 Y140 Z15 & G53 X0 Y0 Z10 & G10 P0 L20 X0 Y0 Z10 & G1 Z15 F300 & G1 Z10 F300 & G0 X-10 Y-10 F1200 & G0 X-8 Y-8 F500 & G10 P0 L20 X0 Y0
+  startup_line0: G53 Z10 & G53 Z0
+  macro0: 
+  macro1: 
+  macro2: 
+  after_reset:
 
 spi:
-  miso_pin: gpio.19
-  mosi_pin: gpio.23
+  miso_pin: gpio.23
+  mosi_pin: gpio.19
   sck_pin: gpio.18
 sdcard:
   card_detect_pin: no_pin
